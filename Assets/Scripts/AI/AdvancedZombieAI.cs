@@ -8,10 +8,13 @@ public class AdvancedZombieAI : MonoBehaviour {
     public float viewRange = 25f;
     public float attackRange = 5f;
 
+    public float eyeHeight;
+
     public bool isChasing = false;
 
+    public Transform playerTransform;
+
     private UnityEngine.AI.NavMeshAgent agent;
-    private Transform playerTransform;
 
     private void Start()
     {
@@ -20,7 +23,9 @@ public class AdvancedZombieAI : MonoBehaviour {
 
     private void Update()
     {
-        Ray ray = new Ray(transform.position, Vector3.forward);
+        Vector3 eyePosition = new Vector3(transform.position.x, transform.position.y + eyeHeight, transform.position.z);
+
+        Ray ray = new Ray(eyePosition, Vector3.forward);
         RaycastHit hitInfo;
 
         CheckHealth();
@@ -31,8 +36,12 @@ public class AdvancedZombieAI : MonoBehaviour {
             {
                 if (isChasing == false)
                 {
-                    playerTransform = hitInfo.collider.GetComponent<Transform>();
                     isChasing = true;
+
+                    if(playerTransform == null) // If player transform is empty
+                    {
+                        playerTransform = hitInfo.collider.GetComponent<Transform>();
+                    }
                 }
             }
         }
@@ -54,6 +63,12 @@ public class AdvancedZombieAI : MonoBehaviour {
     public void TakeDamage(int damage)
     {
         health -= damage;
+
+        if(playerTransform != null)
+        {
+            isChasing = true;
+        }
+
         Debug.Log("Zombie took damage");
     }
 
