@@ -11,6 +11,7 @@ public class MeleeSystem : MonoBehaviour {
     public Camera FPSCamera;
 
     private TreeHealth treeHealth;
+    private BasicAI basicAI;
 
     private void Update()
     {
@@ -23,14 +24,19 @@ public class MeleeSystem : MonoBehaviour {
         {
             if(Physics.Raycast(ray, out hitInfo, weaponRange))
             {
-                if(hitInfo.collider.tag == "Tree")
+                if(hitInfo.collider.tag == "Tree") // Checks if the tree is hit and performs function for the tree
                 {
                     treeHealth = hitInfo.collider.GetComponentInParent<TreeHealth>();
                     AttackTree();
                 }
+
+                else if (hitInfo.collider.tag == "Zombie") // Checks if the tagged Zombie is hit
+                {
+                    basicAI = hitInfo.collider.GetComponent<BasicAI>(); // Finds the script component called "BasicAI"
+                    AttackEnemy();
+                }
             }
         }
-
     }
 
     private void AttackTree()
@@ -39,5 +45,11 @@ public class MeleeSystem : MonoBehaviour {
 
         int damage = Random.Range(minDamage, maxDamage);
         treeHealth.health -= damage;
+    }
+
+    private void AttackEnemy()
+    {
+        int damage = Random.Range(minDamage, maxDamage);
+        basicAI.TakeDamage(damage);
     }
 }
