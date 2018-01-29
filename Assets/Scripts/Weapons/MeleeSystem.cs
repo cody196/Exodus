@@ -11,7 +11,7 @@ public class MeleeSystem : MonoBehaviour {
     public Camera FPSCamera;
 
     private TreeHealth treeHealth;
-    private BasicAI basicAI;
+    private AdvancedZombieAI zombieAI;
 
     private void Update()
     {
@@ -32,7 +32,7 @@ public class MeleeSystem : MonoBehaviour {
 
                 else if (hitInfo.collider.tag == "Zombie") // Checks if the tagged Zombie is hit
                 {
-                    basicAI = hitInfo.collider.GetComponent<BasicAI>(); // Finds the script component called "BasicAI"
+                    zombieAI = hitInfo.collider.GetComponent<AdvancedZombieAI>(); // Finds the script component called "BasicAI"
                     AttackEnemy();
                 }
             }
@@ -50,6 +50,6 @@ public class MeleeSystem : MonoBehaviour {
     private void AttackEnemy()
     {
         int damage = Random.Range(minDamage, maxDamage);
-        basicAI.TakeDamage(damage);
+        zombieAI.TakeDamage(damage);
     }
 }

@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 82196078798945620}
   - component: {fileID: 114734393598412036}
   - component: {fileID: 135883031691855676}
+  - component: {fileID: 114364258624399782}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2829,6 +2830,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114364258624399782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276249387864458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bcd024fc3775954a8babf64916cc0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathCanvas: {fileID: 0}
+  spawnPoint: {x: 199.4823, y: 0.506, z: 234.3498}
+  health: 100
 --- !u!114 &114413645059481164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2855,7 +2870,7 @@ MonoBehaviour:
     MaximumX: 90
     smooth: 0
     smoothTime: 5
-    lockCursor: 1
+    lockCursor: 0
   m_UseFovKick: 1
   m_FovKick:
     Camera: {fileID: 0}
