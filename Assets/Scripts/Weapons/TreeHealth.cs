@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TreeHealth : MonoBehaviour {
 
-    public int health = 100;
+    public int health = 1000;
 
     private void Update()
     {
