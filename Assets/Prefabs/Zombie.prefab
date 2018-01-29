@@ -397,7 +397,9 @@ GameObject:
   - component: {fileID: 4743932364449274}
   - component: {fileID: 95431862059381394}
   - component: {fileID: 195846666668445524}
-  - component: {fileID: 114352652882024222}
+  - component: {fileID: 136859298985577300}
+  - component: {fileID: 114921756169781236}
+  - component: {fileID: 135124338437870064}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Zombie
@@ -461,7 +463,7 @@ GameObject:
   - component: {fileID: 137307460367865672}
   m_Layer: 0
   m_Name: RetopoPantsUV
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -492,7 +494,7 @@ GameObject:
   - component: {fileID: 137011608217156478}
   m_Layer: 0
   m_Name: ShirtUV
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -583,7 +585,7 @@ GameObject:
   - component: {fileID: 137802771818668490}
   m_Layer: 0
   m_Name: LowRetopoUV
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -689,7 +691,7 @@ GameObject:
   - component: {fileID: 137656419865132692}
   m_Layer: 0
   m_Name: HeadUV
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -915,7 +917,7 @@ GameObject:
   - component: {fileID: 137888232353860496}
   m_Layer: 0
   m_Name: EyesUV
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1022,7 +1024,7 @@ GameObject:
   - component: {fileID: 137711184285029048}
   m_Layer: 0
   m_Name: LegsUV
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2353,8 +2355,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1289314832943092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15307.96, y: 0.00000011920929, z: 4709.72}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalPosition: {x: 196.57, y: 0.197, z: 244.88}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 4231723441036354}
   - {fileID: 4986826319442870}
@@ -2699,7 +2701,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114352652882024222
+--- !u!114 &114921756169781236
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2710,6 +2712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ef446c893d24cd4ab05e118febe55d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
 --- !u!114 &114973164073730692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2748,6 +2751,31 @@ MonoBehaviour:
     _serializedObjects:
     - {fileID: 4900000, guid: 2e70b61cd7b75de42b27eb736fd8bdb1, type: 3}
     _serializedCustomData: []
+--- !u!135 &135124338437870064
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1289314832943092}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &136859298985577300
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1289314832943092}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 5
+  m_Direction: 1
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!137 &137011608217156478
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -3411,10 +3439,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 1
+  m_Acceleration: 4
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 240
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
