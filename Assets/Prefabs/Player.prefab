@@ -2844,6 +2844,11 @@ MonoBehaviour:
   deathCanvas: {fileID: 0}
   spawnPoint: {x: 199.4823, y: 0.506, z: 234.3498}
   health: 100
+  hunger: 100
+  thirst: 100
+  healthBar: {fileID: 0}
+  hungerBar: {fileID: 0}
+  thirstBar: {fileID: 0}
 --- !u!114 &114413645059481164
 MonoBehaviour:
   m_ObjectHideFlags: 1

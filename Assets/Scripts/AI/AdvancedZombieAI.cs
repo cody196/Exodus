@@ -34,7 +34,7 @@ public class AdvancedZombieAI : MonoBehaviour
     {
         Vector3 eyePosition = new Vector3(transform.position.x, transform.position.y + eyeHeight, transform.position.z);
 
-        Ray ray = new Ray(eyePosition, Vector3.forward);
+        Ray ray = new Ray(eyePosition, transform.forward);
         RaycastHit hitInfo;
 
         CheckHealth();
