@@ -342,6 +342,8 @@ GameObject:
   - component: {fileID: 114734393598412036}
   - component: {fileID: 135883031691855676}
   - component: {fileID: 114364258624399782}
+  - component: {fileID: 114314828956449092}
+  - component: {fileID: 114293148462813634}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -944,6 +946,7 @@ GameObject:
   - component: {fileID: 81947691540172840}
   - component: {fileID: 124225571775193546}
   - component: {fileID: 114869422755461422}
+  - component: {fileID: 114040546149092216}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -2830,6 +2833,48 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114040546149092216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989511936261298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34382083ad114a07d000fbfb8d76c639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iterations: 1
+  blurSpread: 0.6
+  blurShader: {fileID: 4800000, guid: 57e6deea7c2924e22a5138e2b70bb4dc, type: 3}
+--- !u!114 &114293148462813634
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276249387864458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac047920a890b484d8b37b33faa69791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponRange: 100
+  FPSCamera: {fileID: 20098378938959910}
+  minDamage: 25
+  maxDamage: 75
+--- !u!114 &114314828956449092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276249387864458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34bfad9307d91d8468bfe12349219d12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactRange: 5
+  FPSCamera: {fileID: 20098378938959910}
 --- !u!114 &114364258624399782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2849,6 +2894,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   hungerBar: {fileID: 0}
   thirstBar: {fileID: 0}
+  hungerSpeedMultiplier: 1.1
+  thirstSpeedMultiplier: 1.25
+  healthSpeedMultiplier: 0.25
 --- !u!114 &114413645059481164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2957,7 +3005,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1276249387864458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d5e69381652d8b4e98a09d61fa7872b, type: 3}
   m_Name: 

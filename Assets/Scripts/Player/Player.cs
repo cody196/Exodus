@@ -108,4 +108,9 @@ public class Player : MonoBehaviour {
     {
         thirst += amount;
     }
+
+    public void AttackPlayer(float amount)
+    {
+        health -= amount;
+    }
 }
