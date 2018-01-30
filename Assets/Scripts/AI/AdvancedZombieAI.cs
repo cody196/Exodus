@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AdvancedZombieAI : MonoBehaviour
 {
-
+    #region Variables
     public int health = 100;
     public float viewRange = 25f;
     public float attackRange = 5f;
@@ -33,8 +33,9 @@ public class AdvancedZombieAI : MonoBehaviour
 
     public Ray ray;
     public RaycastHit hitInfo;
+    #endregion
 
-
+    #region Start
     private void Start()
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>(); // Finds the component for the AI
@@ -43,6 +44,7 @@ public class AdvancedZombieAI : MonoBehaviour
         playerTransformDist = GameObject.FindGameObjectWithTag("Player").transform;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
+    #endregion
 
     private void Update()
     {
