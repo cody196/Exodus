@@ -424,6 +424,25 @@ Prefab:
       propertyPath: thirstBar
       value: 
       objectReference: {fileID: 818401246}
+    - target: {fileID: 1125898574518584, guid: 3b39bf0363ccee34fa559c9015c7ed42, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114040546149092216, guid: 3b39bf0363ccee34fa559c9015c7ed42,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20098378938959910, guid: 3b39bf0363ccee34fa559c9015c7ed42,
+        type: 2}
+      propertyPath: near clip plane
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 20098378938959910, guid: 3b39bf0363ccee34fa559c9015c7ed42,
+        type: 2}
+      propertyPath: far clip plane
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b39bf0363ccee34fa559c9015c7ed42, type: 2}
   m_IsPrefabParent: 0
