@@ -9,6 +9,7 @@ public class MeleeSystem : MonoBehaviour {
     public float weaponRange = 3.5f;
 
     public Camera FPSCamera;
+    public meleeAnimation _meleeAnimation;
 
     private TreeHealth treeHealth;
     private AdvancedZombieAI zombieAI;
@@ -22,7 +23,8 @@ public class MeleeSystem : MonoBehaviour {
 
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if(Physics.Raycast(ray, out hitInfo, weaponRange))
+            _meleeAnimation.attack();
+            if (Physics.Raycast(ray, out hitInfo, weaponRange))
             {
                 if(hitInfo.collider.tag == "Tree") // Checks if the tree is hit and performs function for the tree
                 {
