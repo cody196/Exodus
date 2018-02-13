@@ -645,7 +645,7 @@ PlayerSettings:
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: e4e64b8e-d29b-4b85-a97f-9e0bb10a8c7b
-  projectName: 
+  projectName: Exodus
   organizationId: cody196
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
